@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Caprasimo&family=Modak&family=MonteCarlo&family=Montserrat+Alternates&family=Rochester&family=Sacramento&family=Sirivennela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=swap_vert" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <title>UFO Sightings</title>
+    </head>
+    <body class="ufo-body"><center>
+    <h1>👽Check Out These UFO Sighting Stats:👽</h1>
+    <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Search by State..." class="ufo-input">
+    <div class="ufo-scroll">
+        <table id="ufo-table" class="montserrat-alternates">
+            <thead class="ufo" id="myHeader">
+                <tr>
+                    <th onclick="handleStateClick()"><button class="ufo-buttons">State
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button></th>
+                    <th onclick="handleTimeClick()"><button class="ufo-buttons">Time
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button></th>
+                    <th onclick="handleDateClick()"><button class="ufo-buttons">Date
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button></th>
+                    <th onclick="handleCountryClick()"><button class="ufo-buttons">Country
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button></th>
+                    <th onclick="handleDurationClick()"><button class="ufo-buttons">Duration
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot class="ufo-foot">
+                <th colspan="6" scope="row"></th>
+            </tfoot>
+        </table>
+    </div>
+<a href="frontPage.html">Go back</a>
+</body></center>
+<script type="text/javascript" src="ufo.js"></script>
+</html>
