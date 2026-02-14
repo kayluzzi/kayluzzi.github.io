@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FurrEver Home Adoption</title>
-
-  </head>
-  <body>
-<center>
-<img src="pup.webp" alt="puppies photo" />
-</center>
-<p>At <strong>FurrEver Home</strong>, we believe every pet deserves a loving family and every family deserves the joy of a loyal companion. Our mission is simple: to connect caring hearts with animals in need of a second chance.</p>
-<p>We partner with shelters, rescue organizations, and compassionate individuals to help dogs, cats, and other animals find safe, happy, and permanent homes. Whether you’re looking for a playful puppy, a gentle senior cat, or a unique companion with a big personality, FurEver Home makes the adoption journey easy, transparent, and rewarding.</p>
-<p>Adopting a pet is more than bringing home an animal — it’s gaining a lifelong friend. When you choose adoption, you’re not just saving a life; you’re making room for another animal to be rescued and loved.</p>
-<p>Start your journey today. Browse available pets, learn about responsible adoption, and take the first step toward finding your FurEver friend.</p>
-<p>Because every paw deserves a promise. 🐾</p>
-  </body>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Caprasimo&family=Modak&family=MonteCarlo&family=Montserrat+Alternates&family=Rochester&family=Sacramento&family=Sirivennela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=swap_vert" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pets" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pet_supplies" />
+    <title>Data Table</title>
+</head>
+<body class="dog-body"><h1><center>
+    🐕Check Your Best Friends Stats Here:🐕</h1>
+    <center>
+    
+    <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Search by Breed..." class="dog-input"></center>
+    <center>
+    <div class="dog-scroll">
+    <table id="dog-table" class="montserrat-alternates">
+        <thead class="dog" id="myHeader">
+            <tr>
+                <th onclick="handleBreedClick()">
+                    <button>Breed
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                    </button>
+                </th>
+                <th onclick="handleTypeClick()"><button>Type
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                </button></th>
+                <th onclick="handleSizeClick()"><button>Size
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                </button></th>
+                <th onclick="handleIntellClick()"><button>Intelligence
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                </button></th>
+                <th onclick="handleLifeClick()"><button>Life Cost
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>  
+                </button></th>
+                <th onclick="handleLongClick()"><button>Years
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M320-440v-287L217-624l-57-56 200-200 200 200-57 56-103-103v287h-80ZM600-80 400-280l57-56 103 103v-287h80v287l103-103 57 56L600-80Z"/></svg>
+                </button></th>
+            </tr>
+        </thead></center>
+        <tbody>
+        </tbody>
+        <tfoot class="dog-foot">
+            <th colspan="6" scope="row"></th>
+        </tfoot>
+    </table></div><center>
+<a href="frontPage.html">Go Back</a></center></center>
+    <script type="text/javascript" src="index.js"></script>
+</body>
 </html>
