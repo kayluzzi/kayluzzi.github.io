@@ -109,7 +109,7 @@ thead {
   }
 
   .dog {
-    background: url("5.jpeg");
+    background: url("../5.jpeg");
     background-position: center;
     background-size: 15%;
     height: 100px;
@@ -132,14 +132,14 @@ button:hover {
 }
              /* FOOTER */
   .dog-foot {
-    background: url("5.jpeg");
+    background: url("/5.jpeg");
     background-position: center;
     background-size: 15%;
     height: 100px;
 }
 
 .ufo-foot {
-    background: url("1.jpeg");
+    background: url("./1.jpeg");
     background-position: center;
     background-size: 20%;
     height: 80px;
@@ -155,13 +155,13 @@ button:hover {
   }
 
   .dog-input {
-    background: url("pet.svg");
+    background: url("./pet.svg");
     background-repeat: no-repeat;
     background-position: 10px 10px; 
   }
 
   .ufo-input {
-    background: url("hear.svg");
+    background: url("./hear.svg");
     background-position: 10px 10px; 
     background-repeat: no-repeat; 
   }
