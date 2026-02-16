@@ -103,7 +103,7 @@ thead {
 }
 
 .ufo {
-    background: url("1.jpeg");
+    background: url("./1.jpeg");
     background-position: center;
     background-size: 20%;
   }
