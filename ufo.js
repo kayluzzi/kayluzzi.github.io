@@ -109,6 +109,20 @@ let ufoData = [
     { date: "10/10/2005", time: "02:00", state: "Orlando", country: "United States", duration: "11" },
     { date: "10/10/2015", time: "02:00", state: "Orlando", country: "United States", duration: "11" }
 ]
+
+     const rowBuilder = (data) => {
+        const row = `
+            <tr>
+                <td>${data.breed}</td>
+                <td>${data.type}</td>
+                <td>${data.size}</td>
+                <td>${data.intelligence}</td>
+                <td>${data.lifetimeCost}</td>
+                <td>${data.longevityYears}</td>
+            </tr>
+            `
+            return row
+    }
              // TABLE 
 let sortDirection = ""
 const handleTableBuild = () => {
@@ -117,15 +131,7 @@ const handleTableBuild = () => {
     // Loop over our data
         for (let i = 0, len = ufoData.length; i < len; i++) {
         // Build HTML for the <tr> tag
-            const row = `
-        <tr>
-            <td>${ufoData[i].state}</td>
-            <td>${ufoData[i].time}</td>
-            <td>${ufoData[i].date}</td>
-            <td>${ufoData[i].country}</td>
-            <td>${ufoData[i].duration}</td>
-        </tr>
-        `
+           const row = rowBuilder(data[i])
         // Insert HTML into the tbody
             tbody.insertAdjacentHTML('beforeend', row)
     }
@@ -155,15 +161,7 @@ const handleDateClick = () => {
     }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].state}</td>
-                <td>${sortedData[i].time}</td>
-                <td>${sortedData[i].date}</td>
-                <td>${sortedData[i].country}</td>
-                <td>${sortedData[i].duration}</td>
-            </tr>
-            `
+           const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
 }
@@ -181,15 +179,7 @@ const handleTimeClick = () => {
     }
      tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = `
-        <tr>
-            <td>${sortedData[i].state}</td>
-            <td>${sortedData[i].time}</td>
-            <td>${sortedData[i].date}</td>
-            <td>${sortedData[i].country}</td>
-            <td>${sortedData[i].duration}</td>
-        </tr>
-        `
+        const row = rowBuilder(data[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -207,15 +197,7 @@ const handleStateClick = () => {
     }
     tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = `
-        <tr>
-            <td>${sortedData[i].state}</td>
-            <td>${sortedData[i].time}</td>
-            <td>${sortedData[i].date}</td>
-            <td>${sortedData[i].country}</td>
-            <td>${sortedData[i].duration}</td>
-        </tr>
-        `
+       const row = rowBuilder(data[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -233,15 +215,7 @@ const handleCountryClick = () => {
     }
     tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = `
-        <tr>
-            <td>${sortedData[i].state}</td>
-            <td>${sortedData[i].time}</td>
-            <td>${sortedData[i].date}</td>
-            <td>${sortedData[i].country}</td>
-            <td>${sortedData[i].duration}</td>
-        </tr>
-        `
+        const row = rowBuilder(data[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -269,15 +243,7 @@ const handleDurationClick = () => {
     }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].state}</td>
-                <td>${sortedData[i].time}</td>
-                <td>${sortedData[i].date}</td>
-                <td>${sortedData[i].country}</td>
-                <td>${sortedData[i].duration}</td>
-            </tr>
-            `
+            const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
 }
