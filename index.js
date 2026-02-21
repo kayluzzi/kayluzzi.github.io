@@ -53,6 +53,20 @@ let data = [
     { breed: "Great Dane", type: "Working", size: "Large", intelligence: "39%", lifetimeCost: "$14,662", longevityYears: "6.96"},
     { breed: "Chow Chow", type: "Non-Sporting", size: "Medium", intelligence: "5%", lifetimeCost: "$15,898", longevityYears: "9.01"}
     ]
+
+     const rowBuilder = (data) => {
+        const row = `
+            <tr>
+                <td>${data.breed}</td>
+                <td>${data.type}</td>
+                <td>${data.size}</td>
+                <td>${data.intelligence}</td>
+                <td>${data.lifetimeCost}</td>
+                <td>${data.longevityYears}</td>
+            </tr>
+            `
+            return row
+    }
     // Globally set Sort direction
     let sortDirection = ""
     const handleTableBuild = () => {
@@ -61,16 +75,7 @@ let data = [
         // Loop over our data
             for (let i = 0, len = data.length; i < len; i++) {
             // Build HTML for the <tr> tag
-                const row = `
-            <tr>
-                <td>${data[i].breed}</td>
-                <td>${data[i].type}</td>
-                <td>${data[i].size}</td>
-                <td>${data[i].intelligence}</td>
-                <td>${data[i].lifetimeCost}</td>
-                <td>${data[i].longevityYears}</td>
-            </tr>
-            `
+                const row = rowBuilder(data[i])
             // Insert HTML into the tbody
                 tbody.insertAdjacentHTML('beforeend', row)
         }
@@ -104,16 +109,7 @@ let data = [
         // Re-populate with sorted data
         for (let i = 0, len = sortedData.length; i < len; i++) {
             // Build HTML for the <tr> tag
-                const row = `
-            <tr>
-                <td>${sortedData[i].breed}</td>
-                <td>${sortedData[i].type}</td>
-                <td>${sortedData[i].size}</td>
-                <td>${sortedData[i].intelligence}</td>
-                <td>${sortedData[i].lifetimeCost}</td>
-                <td>${sortedData[i].longevityYears}</td>
-            </tr>
-            `
+               const row = rowBuilder(data[i])
             // Insert HTML into the tbody
                 tbody.insertAdjacentHTML('beforeend', row)
         }
@@ -132,16 +128,7 @@ let data = [
         }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].breed}</td>
-                <td>${sortedData[i].type}</td>
-                <td>${sortedData[i].size}</td>
-                <td>${sortedData[i].intelligence}</td>
-                <td>${sortedData[i].lifetimeCost}</td>
-                <td>${sortedData[i].longevityYears}</td>
-            </tr>
-            `
+            const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
     }
@@ -159,16 +146,7 @@ let data = [
         }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].breed}</td>
-                <td>${sortedData[i].type}</td>
-                <td>${sortedData[i].size}</td>
-                <td>${sortedData[i].intelligence}</td>
-                <td>${sortedData[i].lifetimeCost}</td>
-                <td>${sortedData[i].longevityYears}</td>
-            </tr>
-            `
+           const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
     }
@@ -194,16 +172,7 @@ let data = [
     }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].breed}</td>
-                <td>${sortedData[i].type}</td>
-                <td>${sortedData[i].size}</td>
-                <td>${sortedData[i].intelligence}</td>
-                <td>${sortedData[i].lifetimeCost}</td>
-                <td>${sortedData[i].longevityYears}</td>
-            </tr>
-            `
+            const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
     }
@@ -221,16 +190,7 @@ let data = [
         }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = `
-            <tr>
-                <td>${sortedData[i].breed}</td>
-                <td>${sortedData[i].type}</td>
-                <td>${sortedData[i].size}</td>
-                <td>${sortedData[i].intelligence}</td>
-                <td>${sortedData[i].lifetimeCost}</td>
-                <td>${sortedData[i].longevityYears}</td>
-            </tr>
-            `
+           const row = rowBuilder(data[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
 }
@@ -257,16 +217,7 @@ const handleLongClick = () => {
     }
     tbody.innerHTML = ''
     for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = `
-        <tr>
-            <td>${sortedData[i].breed}</td>
-            <td>${sortedData[i].type}</td>
-            <td>${sortedData[i].size}</td>
-            <td>${sortedData[i].intelligence}</td>
-            <td>${sortedData[i].lifetimeCost}</td>
-            <td>${sortedData[i].longevityYears}</td>
-        </tr>
-        `
+        const row = rowBuilder(data[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
