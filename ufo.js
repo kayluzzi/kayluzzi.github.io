@@ -110,15 +110,14 @@ let ufoData = [
     { date: "10/10/2015", time: "02:00", state: "Orlando", country: "United States", duration: "11" }
 ]
 
-     const rowBuilder = (data) => {
+     const rowBuilder = (ufoData) => {
         const row = `
             <tr>
-                <td>${data.breed}</td>
-                <td>${data.type}</td>
-                <td>${data.size}</td>
-                <td>${data.intelligence}</td>
-                <td>${data.lifetimeCost}</td>
-                <td>${data.longevityYears}</td>
+                <td>${ufoData.state}</td>
+                <td>${ufoData.time}</td>
+                <td>${ufoData.date}</td>
+                <td>${ufoData.country}</td>
+                <td>${ufoData.duration}</td>
             </tr>
             `
             return row
@@ -131,7 +130,7 @@ const handleTableBuild = () => {
     // Loop over our data
         for (let i = 0, len = ufoData.length; i < len; i++) {
         // Build HTML for the <tr> tag
-           const row = rowBuilder(data[i])
+           const row = rowBuilder(ufoData[i])
         // Insert HTML into the tbody
             tbody.insertAdjacentHTML('beforeend', row)
     }
@@ -161,7 +160,7 @@ const handleDateClick = () => {
     }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-           const row = rowBuilder(data[i])
+           const row = rowBuilder(ufoData[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
 }
@@ -179,7 +178,7 @@ const handleTimeClick = () => {
     }
      tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = rowBuilder(data[i])
+        const row = rowBuilder(ufoData[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -197,7 +196,7 @@ const handleStateClick = () => {
     }
     tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-       const row = rowBuilder(data[i])
+       const row = rowBuilder(ufoData[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -215,7 +214,7 @@ const handleCountryClick = () => {
     }
     tbody.innerHTML = ''
      for (let i = 0, len = sortedData.length; i < len; i++) {
-        const row = rowBuilder(data[i])
+        const row = rowBuilder(ufoData[i])
         tbody.insertAdjacentHTML('beforeend', row)
     }
 }
@@ -243,7 +242,7 @@ const handleDurationClick = () => {
     }
         tbody.innerHTML = ''
         for (let i = 0, len = sortedData.length; i < len; i++) {
-            const row = rowBuilder(data[i])
+            const row = rowBuilder(ufoData[i])
             tbody.insertAdjacentHTML('beforeend', row)
         }
 }
